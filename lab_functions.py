@@ -1,5 +1,4 @@
 import sqlite3
-import sqlalchemy
 
 
 def insertNewLab(nome, local, responsavel):
