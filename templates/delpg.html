@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+
+</head>
+    <body>
+        <h1 style="text-align:center;">Delete Page</h1>
+            <div class="box">
+                <h1>Delete um lab</h1>
+                <form action="/delete" method="post">
+                    <input type="text" name="delnome" id="delnome" placeholder="Deletar o lab de nome" required/>
+                    <br>
+                    <input type="text" name="dellocal" id="dellocal" placeholder="Local do lab" required/>
+                    <br>
+                    <input type="submit" class="button" value="Delete">
+                </form>
+            </div>
+        <h1><a href="http://127.0.0.1:5000/">Home</a></h1>
+        <h1><a href="http://127.0.0.1:5000/insert">Insert</a></h1>
+        <h1><a href="http://127.0.0.1:5000/update">Update</a></h1>
+            {%if labs%}
+            <div class="lab" style="margin-left:20%">
+                <h2>Registred Labs List(Nome do lab, local do lab, responsavel pelo lab)</h2>
+                <table style="width:100%">
+                    {%for lab in labs%}
+                        <tr>
+                            <td>{{lab[0], lab[1], lab[2]}}</td>
+                        </tr>
+                    {%endfor%}
+                </table>
+            </div>
+            {%endif%}
+    </body>
+</html>

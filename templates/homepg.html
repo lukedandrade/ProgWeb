@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+
+</head>
+    <body>
+        <h1 style="text-align:center;">Homepage</h1>
+        <div class="box">
+            <h1><a href="http://127.0.0.1:5000/insert">Insert</a></h1>
+            <h1><a href="http://127.0.0.1:5000/update">Update</a></h1>
+            <h1><a href="http://127.0.0.1:5000/delete">Delete</a> </h1>
+        </div>
+        {%if labs%}
+        <div class="lab" style="margin-left:20%">
+            <h2>Registred Labs List(Nome do lab, local do lab, responsavel pelo lab)</h2>
+            <table style="width:100%">
+                {%for lab in labs%}
+                <tr>
+                    <td>{{lab[0], lab[1], lab[2]}}</td>
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
+        {%endif%}
+    </body>
